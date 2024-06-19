@@ -1,0 +1,100 @@
+.signincontainer {
+    background-image: url('/images/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signinwrapper {}
+
+.signinlogotext {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.signinlogowrap {
+    width: 150px;
+    height: auto;
+}
+
+.signinlogowrap>img {
+    width: 100%;
+    height: 100%;
+}
+
+.hometitle {
+    text-align: center;
+    color: var(--color-main-3);
+    font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.signincontent {
+    border-radius: 20px;
+    width: 30vw;
+    padding: 40px 0 50px 0;
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid #fff;
+}
+
+.signinform {
+    width: 70%;
+    margin: 1.5rem auto 0 auto;
+}
+
+.signintext {
+    text-align: center;
+    color: var(--color-main-3);
+    font-size: calc(1.3rem + .1vw);
+    font-weight: bold;
+}
+
+.forgettext {
+    font-size: .9rem;
+    color: var(--color-33);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnsignin {
+    all: unset;
+    width: 100%;
+    background-color: #fff;
+    color: var(--color-main-3);
+    width: 100%;
+    border-radius: 50px;
+    padding: 12px 0;
+    border: 1px solid var(--color-main-3);
+}
+
+@keyframes moveArrow {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.arrowhome {
+    margin: 0 10px;
+}
+
+.btnsignin:hover .arrowhome {
+    animation: moveArrow 1.5s infinite;
+}

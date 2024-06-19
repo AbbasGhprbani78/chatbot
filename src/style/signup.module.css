@@ -1,0 +1,104 @@
+.signupcontainer {
+    background-image: url('/images/background.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.signupwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imgformcontent {
+    text-align: center;
+}
+
+.logoform {
+    width: 100px;
+    height: auto;
+}
+
+.signupform {
+    width: 33%;
+}
+
+.signupcontent {
+    width: 100%;
+    background: #E9E9E852;
+    padding: 25px;
+    border-radius: 20px;
+    color: var(--color-46);
+}
+
+.textform {
+    width: 90%;
+    margin-top: 1.5rem;
+    margin-bottom: calc(1.5rem + 3vh);
+}
+
+.textemailinput {
+    font-size: calc(.8rem + .1vw);
+}
+
+.dropdownwrapper {
+    text-align: center;
+    width: max-content;
+    padding: 10px 15px;
+    border-radius: 50px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.dropdownform {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+.optiondrop {
+    color: var(--color-46);
+}
+
+
+
+.btnsignupwrapper {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.btnsignup {
+    all: unset;
+    background-color: var(--color-main-3);
+    color: #fff;
+    width: 100%;
+    border-radius: 50px;
+    padding: 12px 0;
+}
+
+.arrowhome {
+    margin: 0 10px;
+}
+
+@keyframes moveArrow {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.btnsignup:hover .arrowhome {
+    animation: moveArrow 1.5s infinite;
+}

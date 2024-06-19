@@ -1,0 +1,11 @@
+.SideBarcontainer {
+    width: 18%;
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 100vh;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 0px #00000040;
+}
