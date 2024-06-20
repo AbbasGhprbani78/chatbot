@@ -5,6 +5,7 @@ import SideBar from '@/components/module/SideBar/SideBar'
 import { IoSend } from "react-icons/io5";
 import Question from '@/components/module/Question/Question';
 import { LuRefreshCw } from "react-icons/lu";
+import Answer from '@/components/module/Answer/Answer';
 export default function Chat() {
 
     const [isEmpty, setIsEmpty] = useState(false);
@@ -26,25 +27,24 @@ export default function Chat() {
                                 <p className={styles.textemptychat}>How Can I Assist You Today?</p>
                                 <img className={styles.imgemptychat} src="/images/chatimage.gif" alt="chatimage" />
                             </div> :
-                            null
+                            <>
+                                <div className={styles.messagetop}>
+                                    <p className={styles.messagetitle}>Answer</p>
+                                    <button className={styles.refreshbtn}>
+                                        <LuRefreshCw className={styles.refreshicon} />
+                                    </button>
+                                </div>
+                                <div className={styles.answerscontent}>
+                                    <Answer />
+                                    <Answer />
+                                    <Answer />
+                                    <Answer />
+                                    <Answer />
+                                    <Answer />
+                                </div>
+                            </>
                     }
-                    <div className={styles.messagetop}>
-                        <p className={styles.messagetitle}>Answer</p>
-                        <button className={styles.refreshbtn}>
-                            <LuRefreshCw className={styles.refreshicon} />
-                        </button>
-                    </div>
 
-                    <div className={styles.messagebottom}>
-                        <div className={styles.answerlogotext}>
-                            <div className={styles.answerlogo}>
-                                <img src="/images/logoab.png" alt="logo" />
-                            </div>
-                            <span style={styles.answertitle}>Ariis Assistant</span>
-                        </div>
-                        <p className={styles.answertext}>
-                        </p>
-                    </div>
                 </div>
                 <div className={styles.messagewrapper}>
                     <input

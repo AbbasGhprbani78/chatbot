@@ -9,3 +9,73 @@
     background-color: #fff;
     box-shadow: 0px 0px 4px 0px #00000040;
 }
+
+.sidebarcontent {
+    padding: 0 15px;
+}
+
+.sidebartop {
+    margin-top: 2.5rem;
+}
+
+.logosidebar {
+    width: 100px;
+    height: auto;
+}
+
+.hometitle {
+    color: var(--color-main-3);
+    margin-top: .7rem;
+}
+
+.sidebartext {
+    margin-top: 1.5rem;
+    color: var(--color-46);
+}
+
+.btnchatwrap {
+    text-align: center;
+}
+
+.chatbtn {
+    all: unset;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-main-3);
+    color: #fff;
+    padding: 8px 0;
+    border-radius: 50px;
+    margin: 1.5rem auto 0 auto;
+    justify-content: center;
+
+}
+
+.chaticon {
+    margin: 0 10px;
+}
+
+.historytext {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.arrowicon {
+    margin: 0 5px;
+}
+
+.historycontent {
+    overflow-y: scroll;
+    max-height: 50vh;
+}
+
+.datahistory {
+    font-size: .9rem;
+    color: var(--color-14);
+    margin-bottom: .5rem;
+}
+
+.historycontent::-webkit-scrollbar {
+    display: none;
+}

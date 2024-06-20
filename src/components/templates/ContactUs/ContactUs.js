@@ -1,11 +1,11 @@
 "use client"
 import React, { useState } from 'react'
 import styles from '@/style/signup.module.css'
-import Input from '@/components/module/Input/input'
 import SideBar from '@/components/module/SideBar/SideBar'
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Input from '@/components/module/Input/Input';
 export default function ContactUs() {
 
 

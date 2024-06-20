@@ -16,7 +16,7 @@ export default function Home() {
                         alt="logo"
                     />
                 </div>
-                <p className={styles.hometitle}>ARIIS<span className='mx-4'>Ai</span>Assistant</p>
+                <p className={styles.hometitle}>ARIIS<span className='mx-3'>Ai</span>Assistant</p>
                 <p className={styles.hometext}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.
                 </p>
