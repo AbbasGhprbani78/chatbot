@@ -1,13 +1,11 @@
 .SideBarcontainer {
-    width: 18%;
-    position: relative;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    min-height: 100vh;
+    width: calc(20% + 2rem);
+    height: 100vh;
+    max-height: 100vh;
     background-color: #fff;
     box-shadow: 0px 0px 4px 0px #00000040;
+    min-width: 263.150px;
+    overflow: hidden;
 }
 
 .sidebarcontent {
@@ -67,7 +65,7 @@
 
 .historycontent {
     overflow-y: scroll;
-    max-height: 50vh;
+    height: 50vh;
 }
 
 .datahistory {

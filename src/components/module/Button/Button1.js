@@ -4,7 +4,7 @@ import styles from './Button.module.css';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import Link from 'next/link';
 
-export default function Button1({ content, colorbutton }) {
+export default function Button1({ content, colorbutton, route }) {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -12,7 +12,7 @@ export default function Button1({ content, colorbutton }) {
     }, []);
 
     return (
-        <Link href={"#"} className={`${styles.button1} ${styles[colorbutton]} ${isVisible ? styles.visible : ''}`}>
+        <Link href={route} className={`${styles.button1} ${styles[colorbutton]} ${isVisible ? styles.visible : ''}`}>
             {content}
             <FaArrowRightLong className={styles.arrowhome} />
         </Link>

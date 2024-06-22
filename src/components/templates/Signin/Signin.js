@@ -11,6 +11,7 @@ export default function Signin() {
         password: ""
     });
 
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -64,14 +65,16 @@ export default function Signin() {
         console.log(formData)
     }
 
+
+
     return (
         <div className={styles.signincontainer}>
             <div className={styles.signinwrapper}>
                 <div className={styles.signinlogotext}>
                     <div className={styles.signinlogowrap}>
-                        <img src="/images/logo.svg" alt="logo" />
+                        <img className={styles.logosignin} src="/images/logo.svg" alt="logo" />
                     </div>
-                    <p className={styles.hometitle}>ARIIS<span className='mx-4'>Ai</span>Assistant</p>
+                    <p className={styles.hometitle}>ARIIS<span className='mx-3'>Ai</span>Assistant</p>
                 </div>
                 <div className={styles.signincontent}>
                     <p className={styles.signintext}>Sign In</p>
@@ -102,4 +105,4 @@ export default function Signin() {
             <ToastContainer />
         </div>
     )
-}
+} 

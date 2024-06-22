@@ -1,0 +1,25 @@
+.RecentItemM {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #FCFCFA;
+    background: #FFFFFF33;
+    margin-bottom: 1rem;
+    padding: 10px 20px 10px 15px;
+    border-radius: 50px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.recentItemt {
+    color: var(--color-46);
+    margin: 0 1rem 0 10px;
+}
+
+.iconitemhis {
+    color: var(--color-main-3);
+}
+
+.recentdate {
+    color: var(--color-46);
+}

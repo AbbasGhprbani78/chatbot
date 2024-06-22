@@ -270,3 +270,30 @@ template {
     --color-44: #F1A07E;
     --color-45: #FF8845;
 }
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/medium/Poppins-Medium.eot') format('embedded-opentype'),
+        url('/fonts/medium/Poppins-Medium.woff2') format('woff2'),
+        url('/fonts/medium/Poppins-Medium.woff') format('woff'),
+        url('/fonts/medium/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    /* Medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/bold/Poppins-Bold.eot') format('embedded-opentype'),
+        url('/fonts/bold/Poppins-Bold.woff2') format('woff2'),
+        url('/fonts/bold/Poppins-Bold.woff') format('woff'),
+        url('/fonts/bold/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    /* Bold */
+    font-style: normal;
+}
+
+html,
+body {
+    font-family: 'Poppins', sans-serif !important;
+}

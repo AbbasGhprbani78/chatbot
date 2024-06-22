@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '@/style/signup.module.css'
 import SideBar from '@/components/module/SideBar/SideBar'
 import { FaArrowRightLong } from 'react-icons/fa6';
@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Input from '@/components/module/Input/Input';
 export default function ContactUs() {
 
-
+    const [windoWidth, setWindowWidth] = useState(window.innerWidth)
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -74,69 +74,152 @@ export default function ContactUs() {
 
 
 
+    useEffect(() => {
+
+        const handleWindowResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, [])
+
+
+
     return (
         <div className={styles.signupcontainer}>
-            <SideBar />
-            <div className={styles.signupwrapper}>
-                <form className={styles.signupform} onSubmit={handleSubmit}>
-                    <div className={styles.signupcontent}>
-                        <div className={styles.imgformcontent}>
-                            <img className={styles.logoform} src="/images/logo.svg" alt="logo" />
+            {
+                windoWidth > 1000 ?
+                    <>
+                        <SideBar />
+                        <div className={styles.signupwrapper}>
+                            <form className={styles.signupform} onSubmit={handleSubmit}>
+                                <div className={styles.signupcontent}>
+                                    <div className={styles.imgformcontent}>
+                                        <img className={styles.logoform} src="/images/logo.svg" alt="logo" />
+                                    </div>
+                                    <p className={styles.textform}>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+
+                                    <Input
+                                        name="firstName"
+                                        placeholder="First Name"
+                                        value={formData.firstName}
+                                        onChange={handleChange}
+
+                                    />
+                                    <Input
+                                        name="lastName"
+                                        placeholder="Last Name"
+                                        value={formData.lastName}
+                                        onChange={handleChange}
+
+                                    />
+                                    <Input
+                                        name="phoneNumber"
+                                        placeholder="Phone Number"
+                                        value={formData.phoneNumber}
+                                        onChange={handleChange}
+                                    />
+                                    <Input
+                                        name="email"
+                                        placeholder="Email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+
+                                    />
+                                    <div className='d-flex justify-content-center'>
+                                        <div className={styles.dropdownwrapper}>
+                                            <select
+                                                className={styles.dropdownform}
+                                                name="aboutUs"
+                                                value={formData.aboutUs}
+                                                onChange={handleChange}
+                                            >
+                                                <option className={styles.optiondrop} value="ghshfghf">how do you know about us</option>
+                                                <option className={styles.optiondrop} value="xfgh">xvsgms isgs pskmdgsdpk</option>
+                                                <option className={styles.optiondrop} value="fxggfh">fl psdsok psgkpsdfvmxp</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={styles.btnsignupwrapper}>
+                                    <button type="submit" className={styles.btnsignup}>
+                                        submit
+                                        <FaArrowRightLong className={styles.arrowhome} />
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-                        <p className={styles.textform}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
+                    </> :
+                    <>
+                        <div className={styles.signupwrapper}>
+                            <form className={styles.signupform} onSubmit={handleSubmit}>
+                                <div className={styles.signupcontent}>
+                                    <div className={styles.imgformcontent}>
+                                        <img className={styles.logoform} src="/images/logo.svg" alt="logo" />
+                                    </div>
+                                    <p className={styles.textform}>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
 
-                        <Input
-                            name="firstName"
-                            placeholder="First Name"
-                            value={formData.firstName}
-                            onChange={handleChange}
+                                    <Input
+                                        name="firstName"
+                                        placeholder="First Name"
+                                        value={formData.firstName}
+                                        onChange={handleChange}
 
-                        />
-                        <Input
-                            name="lastName"
-                            placeholder="Last Name"
-                            value={formData.lastName}
-                            onChange={handleChange}
+                                    />
+                                    <Input
+                                        name="lastName"
+                                        placeholder="Last Name"
+                                        value={formData.lastName}
+                                        onChange={handleChange}
 
-                        />
-                        <Input
-                            name="phoneNumber"
-                            placeholder="Phone Number"
-                            value={formData.phoneNumber}
-                            onChange={handleChange}
-                        />
-                        <Input
-                            name="email"
-                            placeholder="Email"
-                            value={formData.email}
-                            onChange={handleChange}
+                                    />
+                                    <Input
+                                        name="phoneNumber"
+                                        placeholder="Phone Number"
+                                        value={formData.phoneNumber}
+                                        onChange={handleChange}
+                                    />
+                                    <Input
+                                        name="email"
+                                        placeholder="Email"
+                                        value={formData.email}
+                                        onChange={handleChange}
 
-                        />
-                        <div className='d-flex justify-content-center'>
-                            <div className={styles.dropdownwrapper}>
-                                <select
-                                    className={styles.dropdownform}
-                                    name="aboutUs"
-                                    value={formData.aboutUs}
-                                    onChange={handleChange}
-                                >
-                                    <option className={styles.optiondrop} value="ghshfghf">how do you know about us</option>
-                                    <option className={styles.optiondrop} value="xfgh">xvsgms isgs pskmdgsdpk</option>
-                                    <option className={styles.optiondrop} value="fxggfh">fl psdsok psgkpsdfvmxp</option>
-                                </select>
-                            </div>
+                                    />
+                                    <div className='d-flex justify-content-center'>
+                                        <div className={styles.dropdownwrapper}>
+                                            <select
+                                                className={styles.dropdownform}
+                                                name="aboutUs"
+                                                value={formData.aboutUs}
+                                                onChange={handleChange}
+                                            >
+                                                <option className={styles.optiondrop} value="ghshfghf">how do you know about us</option>
+                                                <option className={styles.optiondrop} value="xfgh">xvsgms isgs pskmdgsdpk</option>
+                                                <option className={styles.optiondrop} value="fxggfh">fl psdsok psgkpsdfvmxp</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={styles.btnsignupwrapper}>
+                                    <button type="submit" className={styles.btnsignup}>
+                                        submit
+                                        <FaArrowRightLong className={styles.arrowhome} />
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                    <div className={styles.btnsignupwrapper}>
-                        <button type="submit" className={styles.btnsignup}>
-                            submit
-                            <FaArrowRightLong className={styles.arrowhome} />
-                        </button>
-                    </div>
-                </form>
-            </div>
+                    </>
+            }
+
             <ToastContainer />
         </div>
     )

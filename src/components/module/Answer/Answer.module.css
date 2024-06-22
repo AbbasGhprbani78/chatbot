@@ -33,3 +33,11 @@
     margin-top: 1.5rem;
     width: 95%;
 }
+
+
+@media (max-width:992px) {
+    .messagebottom {
+        margin-top: 1.5rem;
+        padding: 0 15px;
+    }
+}

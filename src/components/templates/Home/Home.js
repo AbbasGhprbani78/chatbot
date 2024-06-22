@@ -5,6 +5,7 @@ import { Col } from 'react-bootstrap'
 import Image from 'next/image'
 import Button1 from '@/components/module/Button/Button1'
 export default function Home() {
+
     return (
         <div className={styles.homeconatiner}>
             <Col className={styles.homeleft} xs={12} sm={6}>
@@ -22,9 +23,9 @@ export default function Home() {
                 </p>
             </Col>
             <Col className={styles.homeright} xs={12} sm={6} >
-                <Button1 content={"Try Demo"} colorbutton={"trycolor"} />
-                <Button1 content={"Sign In"} colorbutton={"signcolor"} />
-                <Button1 content={"Contact Us"} colorbutton={"conactcolor"} />
+                <Button1 content={"Try Demo"} colorbutton={"trycolor"} route={"/chat"} />
+                <Button1 content={"Sign In"} colorbutton={"signcolor"} route={"/signin"} />
+                <Button1 content={"Contact Us"} colorbutton={"conactcolor"} route={"/contactus"} />
             </Col>
         </div>
     )

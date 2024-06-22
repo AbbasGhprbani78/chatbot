@@ -98,3 +98,35 @@
 .btnsignin:hover .arrowhome {
     animation: moveArrow 1.5s infinite;
 }
+
+@media only screen and (min-width: 1000px) and (max-width: 1195px) {
+    .signincontent {
+        width: 45vw;
+    }
+}
+
+@media (max-width:600px) {
+    .signincontainer {
+        background-image: url('/images/backgroundmobile.png');
+        justify-content: end;
+
+    }
+
+    .signincontent {
+        background-color: #fff;
+        backdrop-filter: blur(0);
+        width: 90vw;
+    }
+
+    .signinform {
+        width: 80%;
+    }
+
+    .logosignin {
+        content: url('/images/logomobile.png');
+    }
+
+    .arrowhome {
+        animation: moveArrow 1.5s infinite;
+    }
+}

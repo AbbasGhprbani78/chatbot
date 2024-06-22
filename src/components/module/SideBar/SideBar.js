@@ -43,11 +43,7 @@ export default function SideBar() {
             "text": "Lorem Ipsum Dolor...",
             "id": 7
         },
-        {
-            "date": "2024-03-13",
-            "text": "Lorem Ipsum Dolor...",
-            "id": 8
-        }
+
     ]);
 
     const formatDateLabel = (dateStr) => {
@@ -104,18 +100,6 @@ export default function SideBar() {
                                 ))}
                             </div>
                         ))}
-                        {/* // <HistoryItem />
-                    
-                        // <HistoryItem />
-                        // <HistoryItem />
-                        // <HistoryItem />
-                        // <HistoryItem />
-                        // <HistoryItem />
-                        // <HistoryItem />
-                        // <HistoryItem />
-                        // <HistoryItem />
-                        // <HistoryItem />
-                        // <HistoryItem /> */}
                     </div>
                 </div>
             </div>

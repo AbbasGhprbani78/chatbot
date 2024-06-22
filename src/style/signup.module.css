@@ -3,9 +3,8 @@
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -101,4 +100,34 @@
 
 .btnsignup:hover .arrowhome {
     animation: moveArrow 1.5s infinite;
+}
+
+
+
+@media only screen and (min-width: 1000px) and (max-width: 1595px) {
+    .signupform {
+        min-width: 431.46px
+    }
+}
+
+@media (max-width:1000px) {
+    .signupcontainer {
+        background-image: url('/images/backgroundmobile.png');
+        background-size: cover;
+    }
+
+    .signupform {
+        min-width: none !important;
+        width: 60%;
+    }
+}
+
+@media (max-width:600px) {
+    .signupform {
+        width: 90%;
+    }
+
+    .arrowhome {
+        animation: moveArrow 1.5s infinite;
+    }
 }
