@@ -29,6 +29,7 @@ export default function Chat() {
             window.removeEventListener('resize', handleWindowResize);
         };
     }, [])
+    
 
     return (
         <>
