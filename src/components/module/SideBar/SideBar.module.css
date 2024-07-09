@@ -77,3 +77,8 @@
 .historycontent::-webkit-scrollbar {
     display: none;
 }
+
+.historycontent {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

@@ -66,6 +66,7 @@
     .logohome img {
         content: url('/images/logomobile.png');
         width: 200px;
+        height: auto;
     }
 
     .hometitle {

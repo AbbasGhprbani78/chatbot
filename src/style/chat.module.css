@@ -27,6 +27,11 @@
     display: none;
 }
 
+.questionwrapper {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .answerswrapper {
     background-color: #fff;
     width: 100%;
@@ -48,6 +53,11 @@
     display: none;
 }
 
+.answerscontent {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 
 .messagewrapper {
     position: absolute;
@@ -64,6 +74,11 @@
 
 .answerswrapper::-webkit-scrollbar {
     display: none;
+}
+
+.answerswrapper {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .answerswrapperfill {
@@ -238,6 +253,11 @@
     display: none;
 }
 
+.recentchatMcontainer {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .iconback {
     opacity: 0;
 }
@@ -278,6 +298,11 @@
 .answerswrapperm::-webkit-scrollbar {
     display: none;
 
+}
+
+.answerswrapperm {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 @keyframes moveArrow {

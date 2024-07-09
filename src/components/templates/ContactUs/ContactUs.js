@@ -6,15 +6,17 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Input from '@/components/module/Input/Input';
+import axios from 'axios';
+import { redirect } from 'next/navigation';
 export default function ContactUs() {
-
     const [windoWidth, setWindowWidth] = useState(window.innerWidth)
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         phoneNumber: '',
         email: '',
-        aboutUs: ''
+        aboutUs: '',
+        password: ''
     });
 
     const handleChange = (e) => {
@@ -26,7 +28,7 @@ export default function ContactUs() {
     };
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         for (const key in formData) {
             if (formData[key].trim() === "") {
@@ -69,10 +71,24 @@ export default function ContactUs() {
                 return;
             }
         }
-        console.log(formData)
+
+        const body = {
+            first_name: formData.firstName,
+            last_name: formData.lastName,
+            email: formData.email,
+            phone_number: formData.phoneNumber,
+            password: formData.password
+        }
+        try {
+            const res = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/signup`, body)
+
+            if (res.status === 201) {
+                redirect("/signin")
+            }
+        } catch (error) {
+            console.log(error)
+        }
     };
-
-
 
     useEffect(() => {
 
@@ -129,6 +145,13 @@ export default function ContactUs() {
                                         name="email"
                                         placeholder="Email"
                                         value={formData.email}
+                                        onChange={handleChange}
+
+                                    />
+                                    <Input
+                                        name="password"
+                                        placeholder="password"
+                                        value={formData.password}
                                         onChange={handleChange}
 
                                     />
@@ -191,6 +214,13 @@ export default function ContactUs() {
                                         name="email"
                                         placeholder="Email"
                                         value={formData.email}
+                                        onChange={handleChange}
+
+                                    />
+                                    <Input
+                                        name="password"
+                                        placeholder="password"
+                                        value={formData.password}
                                         onChange={handleChange}
 
                                     />
